@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Cores
+
+#E59F71
+#BA5A31
+#0C0C0C
+#69DC9E
+#FFFFFF 
+*/
+
+
+
 *{
     font-family: 'Montserrat', sans-serif;
     padding: 0;
@@ -12,9 +25,62 @@ html, body{
 }
 
 html{
-    background-color:hsla(217, 9%, 45%, 0.5)
+    background-color:#0C0C0C ; 
+}
+
+.conteiner{
+    max-width: 600px;
+    min-height: 80vh;
+    margin: 2rem auto;
+    display: flex;
+    background-color: #69DC9E;  
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.form h1{
+    font-size: 3rem;
+}
+
+.form p{
+    margin-bottom: 1.5rem;
+    
+}
+
+.form-control{
+    margin: 0.8rem 0;
+    display: flex;
+    flex-direction: column;
 }
 
 input :focus{
     outline: none;
+}
+
+.form label{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form input{
+    border: none;
+    border-bottom:1px solid #333;
+    background-color: #69DC9E;
+    padding: 0.6rem 0;
+    width: 100%;
+}
+
+#gerarNovaSenha{
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#gerarNovaSenha:hover{
+    color: #E59F71;
 }
