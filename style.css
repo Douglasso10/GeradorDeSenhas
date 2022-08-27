@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/*Cores
-
-#E59F71
-#BA5A31
-#0C0C0C
-#69DC9E
-#FFFFFF 
-*/
-
 
 
 *{
@@ -25,7 +16,7 @@ html, body{
 }
 
 html{
-    background-color:#0C0C0C ; 
+    background-color:#2ab7ca ; 
 }
 
 .conteiner{
@@ -33,18 +24,29 @@ html{
     min-height: 80vh;
     margin: 2rem auto;
     display: flex;
-    background-color: #69DC9E;  
+    background-color: #F4F4F8; 
+    border-radius: 5px; 
 }
 
 .form{
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 2rem auto;
 }
 
 .form h1{
     font-size: 3rem;
+}
+
+.gera_senha{
+    border: 1px solid #2AB7CA;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
 .form p{
@@ -69,8 +71,8 @@ input :focus{
 
 .form input{
     border: none;
-    border-bottom:1px solid #333;
-    background-color: #69DC9E;
+    border-bottom:1px solid #E6E6EA;
+    background-color: #F4F4F8;
     padding: 0.6rem 0;
     width: 100%;
 }
@@ -82,5 +84,25 @@ input :focus{
 }
 
 #gerarNovaSenha:hover{
-    color: #E59F71;
+    color: #FE4A49;
 }
+
+.btn{
+    background-color: #FE4A49;
+    border: none;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    color: #E6E6EA;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 0 auto;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #FE4A49;
+    opacity: 1;
+}
+
