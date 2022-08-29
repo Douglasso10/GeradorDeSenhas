@@ -46,6 +46,20 @@ function checkInputs(){
    } else{
     setSuccessFor(passwordConfirmation);
    }
+
+   const formControls = form.querySelectorAll('.form-control');
+
+   const formValid = [... formControls].every (formControl => {
+    return (formControl.className === "form-control success");
+   })
+
+   if(formValid){
+    const btn = document.getElementById('btn_submit');
+    btn.addEventListener('click', () => {
+        location.reload();
+       })
+    alert('Cadastro realizado com sucesso!');
+   }
 }
 
 function setErrorFor(input, message){
