@@ -68,10 +68,6 @@ html{
     visibility: hidden;
 }
 
-.form-control small{
-    visibility: hidden;
-}
-
 input :focus{
     outline: none;
 }

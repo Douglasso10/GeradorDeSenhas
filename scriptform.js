@@ -20,16 +20,40 @@ function checkInputs(){
     const passwordConfirmationValue = passwordConfirmation.value;
 
     if (usernameValue === "") {
-        setErrorFor(username, "O nome do usuário é obrigatório.")
-    }
+        setErrorFor(username, "O nome do usuário é obrigatório.");
+    }else setSuccessFor(username);
+
+    if(emailValue === ""){
+        setErrorFor(email, "O E-mail é obrigatório.");
+    }else if(!checkEmail(emailValue)){
+        setErrorFor(email, "O email é inválido.");
+    }else{
+        setSuccessFor(email);
+    } 
+    
+    if(passwordValue ===""){
+        setErrorFor(password, "A senha é obrigatória.");
+   }else if (passwordValue.length < 6){
+        setErrorFor(password, "A senha precisa no mínimo de 6 caracteres.");
+   }else{
+        setSuccessFor(password);
+   }
+
+   if(passwordConfirmationValue === ""){
+    setErrorFor(passwordConfirmation, "A confirmação de senha é obrigatória.");
+   }else if (passwordConfirmationValue != passwordValue){
+    setErrorFor(passwordConfirmation, "As senhas não conferem.");
+   } else{
+    setSuccessFor(passwordConfirmation);
+   }
 }
 
 function setErrorFor(input, message){
     const formControl = input.parentElement;
-    const small = formControl.querySelector('small');
+    const small = formControl.querySelector("small");
 
     small.innerText = message;
-    formControl.className = "form-control error";
+    formControl.className = "form-control error"
 }
 
 function setSuccessFor(input){
@@ -38,3 +62,6 @@ function setSuccessFor(input){
     formControl.className = "form-control success";
 }
 
+function checkEmail (email){
+    return /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+}
