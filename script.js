@@ -59,5 +59,4 @@ gerarNovaSenha.addEventListener('click' , () =>{
         simbolo);
 })
 
-//Formulário:
 

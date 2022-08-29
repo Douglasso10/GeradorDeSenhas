@@ -9,28 +9,34 @@
 </head>
 <body>
     <div class="conteiner">
-        <form class="form">
+        <form class="form" id="form">
             <h1>Crie sua conta:</h1>
             <div class="form-control">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-                <i></i>
-                <i></i>
-                <small></small>
+                <label for="username">Nome</label>
+                <input type="text" name="nome" id="username" placeholder="Digite seu nome">
+                <div class="mensagem">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small></small>
+                </div>
             </div>
             <div class="form-control">
                 <label for="email">E-Mail</label>
                 <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
-                <i></i>
-                <i></i>
-                <small></small>
+                <div class="mensagem">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
+                </div>
             </div>
             <div class="form-control">
                 <label for="password">Senha</label>
                 <input type="password" name="password" id="password" placeholder="Digite a sua senha">
-                <i></i>
-                <i></i>
-                <small></small>
+                <div class="mensagem">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
+                </div>
             </div>
             <p>Criar uma senha segura? <span id="gerarNovaSenha">Clique aqui!</span></p>
             <div class="gera_senha" id="geradorDeSenhas">
@@ -40,13 +46,17 @@
             <div class="form-control">
                 <label for="confirm-password">Confirmação de senha</label>
                 <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirme a sua senha">
-                <i></i>
-                <i></i>
-                <small></small>
+                <div class="mensagem">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Mensagem de erro</small>
+                </div>
             </div>
             <button class="btn" type="submit" id="btn_submit" >Cadastrar</button>
         </form>
     </div>
     <script src="script.js"></script>
+    <script src="scriptform.js"></script>
+    <script src="https://kit.fontawesome.com/263fed1470.js" crossorigin="anonymous"></script>
 </body>
 </html>

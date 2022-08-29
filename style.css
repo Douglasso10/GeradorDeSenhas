@@ -52,13 +52,24 @@ html{
 
 .form p{
     margin-bottom: 1.5rem;
-    
 }
 
 .form-control{
     margin: 0.8rem 0;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.form-control i{
+    position: absolute;
+    bottom: 20px;
+    left: 345px;
+    visibility: hidden;
+}
+
+.form-control small{
+    visibility: hidden;
 }
 
 input :focus{
@@ -76,6 +87,11 @@ input :focus{
     background-color: #F4F4F8;
     padding: 0.6rem 0;
     width: 100%;
+}
+
+.mensagem{
+    display: flex;
+
 }
 
 #gerarNovaSenha{
@@ -107,3 +123,22 @@ input :focus{
     opacity: 1;
 }
 
+/* Erro e Sucesso*/
+
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
